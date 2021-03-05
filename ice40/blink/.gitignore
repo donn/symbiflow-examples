@@ -1,0 +1,15 @@
+*.eblif
+*.json
+*.log
+*.v
+*.net
+*.rpt
+*.asc
+*.bit
+*.place
+*.route
+*.bin
+*.fasm
+*.post_routing
+!example.v
+!example_tb.v
