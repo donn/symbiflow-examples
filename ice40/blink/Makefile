@@ -1,7 +1,7 @@
 all: top.bit
 
 top.bit:
-	silkflow run -t top -d lp8k-cm81 -P lp8k-cm81 -p tinyfpga-bx.pcf example.v
+	silkflow run -t top -D lp8k-cm81 -P lp8k-cm81 -p tinyfpga-bx.pcf example.v
 
 .PHONY: clean
 
