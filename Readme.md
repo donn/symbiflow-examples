@@ -1,4 +1,4 @@
-# Symbiflow Examples
+# Silkflow Examples
 This is an alternative Symbiflow Examples tool based on the efabless Silkflow utility.
 
 # Setup
