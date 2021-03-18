@@ -12,7 +12,7 @@ module top (
     ////////
 
     // keep track of time and location in blink_pattern
-    reg [25:0] blink_counter = 26'b0;
+    reg [25:0] blink_counter;
 
     // pattern that will be flashed over the LED over time
     wire [31:0] blink_pattern = 32'b101010001110111011100010101;

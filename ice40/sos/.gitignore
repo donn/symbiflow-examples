@@ -10,6 +10,7 @@
 *.route
 *.bin
 *.fasm
+*.blif
 *.post_routing
 !example.v
 !example_tb.v

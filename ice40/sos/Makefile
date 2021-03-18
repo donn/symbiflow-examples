@@ -1,20 +1,19 @@
+SILKFLOW_CMD = run_nextpnr
+
 all: top.bit
 
-top.bit:
-	silkflow run -t top -D lp8k-cm81 -P lp8k-cm81 -p tinyfpga.pcf example.v
+vtr: SILKFLOW_CMD = run
+vtr: top.bit
+
+top.bit: example.v
+	mkdir -p build
+	cd build && silkflow $(SILKFLOW_CMD) -t top -D lp8k-cm81 -P lp8k-cm81 -p ../tinyfpga.pcf -b ../top.bit ../example.v
 
 .PHONY: clean
 
 clean:
-	rm -f $(find . | grep "\.v" | grep -v "example")
-	rm -f *.log
+	rm -rf build
+	rm -f *.bit
 	rm -f *.json
-	rm -f *.place
-	rm -f *.rpt
-	rm -f *.fasm
 	rm -f *.asc
-	rm -f *.eblif
-	rm -f *.route
-	rm -f *.bin
-	rm -f *.net
-	rm -f *.post_routing
+	rm -f *.fasm
