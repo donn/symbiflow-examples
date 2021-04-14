@@ -1,0 +1,99 @@
+# Lattice iCEStick Pin Constraints File
+
+# * Port names correspond to layout as viewed from the top with the USB port facing left.
+
+# CLK
+set_io --warn-no-port CLK 21
+
+# I/O: J1 Connector (On the Top)
+## [10][ 9][ 8][ 7][ 6][ 5][ 4][ 3][ 2][ 1]
+##                                  GND 3.3V
+set_io --warn-no-port J1_PIN3 112
+set_io --warn-no-port J1_PIN4 113
+set_io --warn-no-port J1_PIN5 114
+set_io --warn-no-port J1_PIN6 115
+set_io --warn-no-port J1_PIN7 116
+set_io --warn-no-port J1_PIN8 117
+set_io --warn-no-port J1_PIN9 118
+set_io --warn-no-port J1_PIN10 119
+
+# I/O: J2 Connector (Blocky Connector in the Middle)
+## 3.3V [12][ 6] 3.3V
+##  GND [11][ 5] GND
+##      [10][ 4]
+##      [ 9][ 3]
+##      [ 8][ 2]
+##      [ 7][ 1] <|
+set_io --warn-no-port J2_PIN1 78
+set_io --warn-no-port J2_PIN2 79
+set_io --warn-no-port J2_PIN3 80
+set_io --warn-no-port J2_PIN4 81
+set_io --warn-no-port J2_PIN7 87
+set_io --warn-no-port J2_PIN8 88
+set_io --warn-no-port J2_PIN9 90
+set_io --warn-no-port J2_PIN10 91
+
+## LEDs (To the Left of the Blocky Connector)
+##       [D1]
+##  [D4] [D5] [D2]
+##       [D3]
+set_io --warn-no-port D1 99
+set_io --warn-no-port D2 98
+set_io --warn-no-port D3 97
+set_io --warn-no-port D4 96
+set_io --warn-no-port D5 95 # This one is green!
+
+
+# I/O: J3 Connector (On the Bottom)
+##                                  GND 3.3V
+## [10][ 9][ 8][ 7][ 6][ 5][ 4][ 3][ 2][ 1]
+set_io --warn-no-port J3_PIN3 62
+set_io --warn-no-port J3_PIN4 61
+set_io --warn-no-port J3_PIN5 60
+set_io --warn-no-port J3_PIN6 56
+set_io --warn-no-port J3_PIN7 48
+set_io --warn-no-port J3_PIN8 47
+set_io --warn-no-port J3_PIN9 45
+set_io --warn-no-port J3_PIN10 44
+
+# IrDA (IR Blaster to the far left of the board)
+set_io --warn-no-port RXD 106
+set_io --warn-no-port TXD 105
+set_io --warn-no-port SD 107
+
+
+###############################################################################
+#
+# Author: Mohamed Gaber
+# Manual: https://www.latticesemi.com/view_document?document_id=50701
+#
+###############################################################################
+#
+# Copyright (c) 2021, efabless Corporation
+# All rights reserved.
+# 
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are met:
+# 
+# 1. Redistributions of source code must retain the above copyright notice, this
+#    list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright notice,
+#    this list of conditions and the following disclaimer in the documentation
+#    and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+# ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+# WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+# DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
+# ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+# (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+# LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+# ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+# SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+# The views and conclusions contained in the software and documentation are those
+# of the authors and should not be interpreted as representing official policies,
+# either expressed or implied, of the <project name> project. 
+#
+###############################################################################

@@ -1,13 +1,24 @@
 SILKFLOW_CMD = run_nextpnr
+TARGET ?= tinyfpga-bx
+
+# ---
+FPGA = lp8k-cm81
+PART = iCE40-LP8K-CM81
+PCF = tinyfpga-bx.pcf
+#--
+
+ifeq (${TARGET}, icestick)
+FPGA = hx1k-vq100
+PART = HX1K-VQ100
+PCF = icestick.pcf
+endif
 
 all: top.bit
-
 vtr: SILKFLOW_CMD = run
 vtr: top.bit
 
-top.bit: example.v
-	mkdir -p build
-	cd build && silkflow $(SILKFLOW_CMD) -t top -D lp8k-cm81 -P lp8k-cm81 -p ../tinyfpga.pcf -b ../top.bit ../example.v
+top.bit:
+	silkflow $(SILKFLOW_CMD) -t top -D $(FPGA) -P $(PART) -p $(PCF) example.v
 
 .PHONY: clean
 
